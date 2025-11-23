@@ -1,0 +1,76 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Sample API for GPT Actions",
+    "version": "1.0.0",
+    "description": "Public API for testing GPT Actions. Replace server URL with your actual API domain."
+  },
+  "servers": [
+    {
+      "url": "https://your-domain.com/api"
+    }
+  ],
+  "paths": {
+    "/hello": {
+      "get": {
+        "summary": "Return a greeting message",
+        "operationId": "getHello",
+        "responses": {
+          "200": {
+            "description": "A greeting message response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sum": {
+      "post": {
+        "summary": "Calculate the sum of two numbers",
+        "operationId": "addNumbers",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "a": { "type": "number" },
+                  "b": { "type": "number" }
+                },
+                "required": ["a", "b"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The sum of a and b",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
