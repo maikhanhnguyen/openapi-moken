@@ -3,7 +3,7 @@
   "info": {
     "title": "Sample API for GPT Actions",
     "version": "1.0.0",
-    "description": "Public API for testing GPT Actions. Replace server URL with your actual API domain."
+    "description": "Public API for testing GPT Actions.Replace server URL with your actual API domain."
   },
   "servers": [
     {
